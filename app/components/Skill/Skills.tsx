@@ -53,7 +53,7 @@ const Card = styled(motion.div)`
   padding: 30px;
 `
 
-const Circle = styled.div`
+const Circle = styled.div<{TextColor : string}>`
   width: 100px;
   height: 100px;
   display: flex;
@@ -69,7 +69,7 @@ const CircleImage = styled(Image)`
   width: 70px;
 `
 
-const Header = styled.h2`
+const Header = styled.h2<{TextColor : string}>`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
