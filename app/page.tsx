@@ -62,9 +62,6 @@ const MenuIcon = styled.img`
   width: 30px;
 `
 
-interface TypedState {
-
-}
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);

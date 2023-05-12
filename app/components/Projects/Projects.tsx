@@ -122,7 +122,7 @@ const ProjectTags = styled.div`
 const Projects = () => {
   const projects = ProjectData
   const [displayCount, setDisplayCount] = useState(3)
-  const smallScreen = window.screen.width <= 780 ? true : false
+  const smallScreen = typeof window !== "undefined" && window.screen.width <= 780 ? true : false
 
   const handleLoadMore = () => {
     setDisplayCount(displayCount + 3)
