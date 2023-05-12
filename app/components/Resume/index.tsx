@@ -56,7 +56,7 @@ const Resume = () => {
         },
       })
     }
-  }, [inView])
+  }, [animation, inView])
 
   const Timeline = () => (
     <VerticalTimeline>

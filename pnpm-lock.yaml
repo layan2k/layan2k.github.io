@@ -54,6 +54,9 @@ dependencies:
     version: 5.0.4
 
 devDependencies:
+  '@types/react-vertical-timeline-component':
+    specifier: ^3.3.3
+    version: 3.3.3
   '@types/styled-components':
     specifier: ^5.1.26
     version: 5.1.26
@@ -1640,6 +1643,12 @@ packages:
     dependencies:
       '@types/react': 18.2.6
     dev: false
+
+  /@types/react-vertical-timeline-component@3.3.3:
+    resolution: {integrity: sha512-xmKeQ9TtZLeGtsWQx2im0U79wnC0M2F/FPEAHP7uS3G9SAVgis1XSHzq/mq7XrcbnI9eiZbL7dhiy/TqCuDc7w==}
+    dependencies:
+      '@types/react': 18.2.6
+    dev: true
 
   /@types/react@18.2.6:
     resolution: {integrity: sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==}

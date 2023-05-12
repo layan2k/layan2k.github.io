@@ -74,7 +74,7 @@ const Navbar = () => {
             </LinkItem>
           </ListLink>
         </Links>
-        <VerticalLine />
+        <VerticalLine height={35} />
         <SocialMedia>
           {SocialMediaIconsData.map((data, k) => (
             <SocialMediaIcon data={data} key={k} />

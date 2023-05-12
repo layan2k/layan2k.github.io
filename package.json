@@ -10,7 +10,6 @@
     "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "dependencies": {
     "@formspark/use-formspark": "^0.1.39",
@@ -32,6 +31,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/styled-components": "^5.1.26"
   }
 }
