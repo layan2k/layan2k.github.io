@@ -14,6 +14,7 @@ import BackToTop from './components/common/BackToTop'
 import Footer from './components/Footer/Footer'
 import { useState } from 'react'
 import Head from 'next/head';
+import Image from 'next/image';
 
 const RootContainer = styled.div`
 overflow-x: hidden;
@@ -57,7 +58,7 @@ const Left = styled.a`
     color: #1f51ff;
   }
 `
-const MenuIcon = styled.img`
+const MenuIcon = styled(Image)`
   height: 40px;
   width: 30px;
 `
@@ -87,7 +88,7 @@ export default function Home() {
           LS<span>.</span>
         </Left>
         {/* <button onClick={handleMenuOpen}>ClickMe</button> */}
-        <MenuIcon src={HamMenu} onClick={handleMenuOpen} />
+        <MenuIcon src={HamMenu} alt='MenuButton' onClick={handleMenuOpen} />
         <MobileMenu isOpen={menuOpen} onClose={handleMenuClose} />
       </Mobile>
       <Hero />
