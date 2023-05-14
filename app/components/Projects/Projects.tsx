@@ -1,9 +1,11 @@
+// Projects Component
 import styled from 'styled-components'
 import React, { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import { ProjectData } from '../../data/projects'
 
+// CSS styled-components + framer motion
 const Container = styled(motion.div)`
   background-color: #1d1f22;
   padding: 60px 30px;
@@ -122,9 +124,10 @@ const ProjectTags = styled.div`
 const Projects = () => {
   const projects = ProjectData
   const [displayCount, setDisplayCount] = useState(3)
-  const smallScreen = typeof window !== "undefined" && window.screen.width <= 780 ? true : false
+  const smallScreen = typeof window !== 'undefined' && window.screen.width <= 780 ? true : false
 
   const handleLoadMore = () => {
+    // Function that increases count
     setDisplayCount(displayCount + 3)
   }
 
@@ -156,7 +159,7 @@ const Projects = () => {
     }
   }, [animation, inView, smallScreen])
 
-  const displayProjects = projects.slice(0, displayCount).map((project) => {
+  const displayProjects = projects.slice(0, displayCount).map(project => {
     return (
       <ProjectCard key={project.title}>
         <ProjectImage
@@ -168,24 +171,24 @@ const Projects = () => {
         <p>{project.about}</p>
         <UpperTag>
           {project.demo && (
-            <a className='project-link' href={project.demo} target='_blank' rel='noreferrer'>
-              <LinkButton className='link-button'>
-                <i className='fi fi-rr-globe'></i>Demo
+            <a className="project-link" href={project.demo} target="_blank" rel="noreferrer">
+              <LinkButton className="link-button">
+                <i className="fi fi-rr-globe"></i>Demo
               </LinkButton>
             </a>
           )}
           {project.github && (
-            <a className='project-link' href={project.github} target='_blank' rel='noreferrer'>
-              <LinkButton className='link-button'>
-                <i className='devicon-github-original colored'></i>Github
+            <a className="project-link" href={project.github} target="_blank" rel="noreferrer">
+              <LinkButton className="link-button">
+                <i className="devicon-github-original colored"></i>Github
               </LinkButton>
             </a>
           )}
         </UpperTag>
-        <ProjectTags className='project-tags'>
-          {project.tags.map((tag) => {
+        <ProjectTags className="project-tags">
+          {project.tags.map(tag => {
             return (
-              <label className='tag' key={tag}>
+              <label className="tag" key={tag}>
                 {tag}
               </label>
             )
@@ -195,7 +198,7 @@ const Projects = () => {
     )
   })
   return (
-    <div ref={ref} id='projects'>
+    <div ref={ref} id="projects">
       <Container animate={animation}>
         <h1>Projects</h1>
         <ProjectsContainer>{displayProjects}</ProjectsContainer>

@@ -1,7 +1,8 @@
-import React, { Dispatch, SetStateAction } from 'react'
+// Mobile navbar
+// import React, { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
-
+// CSS styled-components
 const MenuContainer = styled.div`
   position: fixed;
   top: 0;
@@ -35,22 +36,31 @@ const CloseButton = styled.button`
   cursor: pointer;
 `
 
-interface MainProp  {
-  isOpen: boolean,
+interface MainProp {
+  isOpen: boolean
   onClose: any
 }
 const MobileMenu: React.FC<MainProp> = ({ isOpen, onClose }) => {
   const handleClick = () => {
+    // Handleclick to close the Navbar
     onClose()
   }
 
   return isOpen ? (
     <MenuContainer>
       <CloseButton onClick={handleClick}>X</CloseButton>
-      <MenuItem onClick={handleClick} href='/#projects'>Project</MenuItem>
-      <MenuItem onClick={handleClick} href='/#skills'>Skills</MenuItem>
-      <MenuItem onClick={handleClick} href='/#resume'>Resume</MenuItem>
-      <MenuItem onClick={handleClick} href='/#contact'>Contact</MenuItem>
+      <MenuItem onClick={handleClick} href="/#projects">
+        Project
+      </MenuItem>
+      <MenuItem onClick={handleClick} href="/#skills">
+        Skills
+      </MenuItem>
+      <MenuItem onClick={handleClick} href="/#resume">
+        Resume
+      </MenuItem>
+      <MenuItem onClick={handleClick} href="/#contact">
+        Contact
+      </MenuItem>
     </MenuContainer>
   ) : null
 }

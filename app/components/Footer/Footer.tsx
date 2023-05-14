@@ -1,8 +1,10 @@
+// Footer Component
 import React from 'react'
 import styled from 'styled-components'
 import { SocialMediaIconsData } from '../../data/social'
 import SocialMediaIcon from '../common/SocialMediaIcon'
 
+// CSS styled-components
 const Container = styled.div`
   display: flex;
   height: 100px;

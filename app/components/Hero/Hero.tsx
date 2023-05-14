@@ -1,3 +1,4 @@
+// Hero Section Component
 import React from 'react'
 import styled from 'styled-components'
 import Divider from '../common/Divider'
@@ -6,6 +7,7 @@ import Me from '../../assets/Me2.png'
 import Blob from '../../assets/blob.svg'
 import Image from 'next/image'
 
+// CSS styled-components and framer-motion
 const Container = styled.div`
   display: flex;
   padding: 60px 30px;
@@ -202,24 +204,21 @@ const Hero = () => {
         </NameTitle>
         <Divider />
         <SocialLinksContainer>
-          <SocailLinks href='https://www.instagram.com/layan2k/' target='_blank'>
+          <SocailLinks href="https://www.instagram.com/layan2k/" target="_blank">
             Instagram
           </SocailLinks>
           <VerticalLine height={10} />
-          <SocailLinks href='https://www.linkedin.com/in/leslieshumba' target='_blank'>
+          <SocailLinks href="https://www.linkedin.com/in/leslieshumba" target="_blank">
             LinkedIn
           </SocailLinks>
         </SocialLinksContainer>
-        <Button
-          download
-          href='https://firesidebackapp.s3.amazonaws.com/mypics/Leslie+Shumba+Resume.pdf'
-        >
+        <Button download href="https://firesidebackapp.s3.amazonaws.com/mypics/Leslie+Shumba+Resume.pdf">
           Download Resume
         </Button>
       </NameContainer>
       <ImageContainer>
-        <HeroImage alt='Leslie Pic' src={Me} />
-        <Bloby alt='Blob' src={Blob} />
+        <HeroImage alt="Leslie Pic" src={Me} />
+        <Bloby alt="Blob" src={Blob} />
       </ImageContainer>
       <RightContainer>
         <IntroContainer>
@@ -230,8 +229,8 @@ const Hero = () => {
           <br /> Full-Stack Web Developer
         </TitleJob>
         <OtherText>
-          Crafting exceptional websites and driving traffic through SEO expertise - I am a
-          full-stack developer and SEO specialist dedicated to achieving your digital goals.
+          Crafting exceptional websites and driving traffic through SEO expertise - I am a full-stack developer and SEO
+          specialist dedicated to achieving your digital goals.
         </OtherText>
       </RightContainer>
     </Container>

@@ -1,9 +1,11 @@
+// Main Navbar Desktop
 import React from 'react'
 import styled from 'styled-components'
 import { SocialMediaIconsData } from '../../data/social'
 import SocialMediaIcon from '../common/SocialMediaIcon'
 import VerticalLine from '../common/VerticalLine'
 
+// CSS Styled Components
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -61,16 +63,16 @@ const Navbar = () => {
         <Links>
           <ListLink>
             <LinkItem>
-              <LinkItemAdd href='#projects'>Projects</LinkItemAdd>
+              <LinkItemAdd href="#projects">Projects</LinkItemAdd>
             </LinkItem>
             <LinkItem>
-              <LinkItemAdd href='#skills'>Skills</LinkItemAdd>
+              <LinkItemAdd href="#skills">Skills</LinkItemAdd>
             </LinkItem>
             <LinkItem>
-              <LinkItemAdd href='#resume'>Resume</LinkItemAdd>
+              <LinkItemAdd href="#resume">Resume</LinkItemAdd>
             </LinkItem>
             <LinkItem>
-              <LinkItemAdd href='#contact'>Contact</LinkItemAdd>
+              <LinkItemAdd href="#contact">Contact</LinkItemAdd>
             </LinkItem>
           </ListLink>
         </Links>

@@ -1,9 +1,11 @@
+// Contact Component
 import { motion, useAnimation } from 'framer-motion'
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 import ContactForm from './Form'
 
+// CSS styled-components + framer motion
 const Container = styled.div`
   padding: 60px 30px;
   border-radius: 60px 45px 30px 15px/15px 30px 45px 60px;
@@ -35,7 +37,7 @@ const Wrapper = styled(motion.div)`
 `
 
 const Contact = () => {
-  const { ref, inView }  = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
   })
   const animation = useAnimation()
@@ -61,7 +63,7 @@ const Contact = () => {
     }
   }, [animation, inView])
   return (
-    <Container id='contact' ref={ref}>
+    <Container id="contact" ref={ref}>
       <Wrapper animate={animation}>
         <TextContainer>
           <MainText> Questions?</MainText>

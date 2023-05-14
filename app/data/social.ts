@@ -1,3 +1,4 @@
+// Social Media export function
 import Facebook from '../assets/Facebook.svg'
 import Twitter from '../assets/Twitter.svg'
 import LinkedIn from '../assets/Linkedin.svg'

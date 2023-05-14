@@ -1,7 +1,10 @@
+// Bact To Top Button
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Up from '../../assets/up.svg'
 import Image from 'next/image'
+
+// CSS styled-components + framer motion
 const BackToTopButton = styled.button`
   display: none;
   position: fixed;
@@ -57,12 +60,8 @@ function BackToTop() {
   }
 
   return (
-    <BackToTopButton
-      className={isBottom ? 'visible' : ''}
-      onClick={handleButtonClick}
-      title='BackToTop'
-    >
-      <ButtonImage src={Up} alt='Back To Top' />
+    <BackToTopButton className={isBottom ? 'visible' : ''} onClick={handleButtonClick} title="BackToTop">
+      <ButtonImage src={Up} alt="Back To Top" />
     </BackToTopButton>
   )
 }

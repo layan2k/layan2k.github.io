@@ -1,8 +1,10 @@
-import styled, {css} from 'styled-components'
+// Show Web Services Component
+import styled, { css } from 'styled-components'
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 
+// CSS styled components + framer Motion
 const Container = styled(motion.div)`
   padding: 50px 30px;
   background-color: #464646;
@@ -75,11 +77,11 @@ const ServicesCard = styled(motion.div)`
     width: 250px;
   }
 `
-
+// Services Provided
 const ServicesData = [
-  { name: 'Web Development', icon: <i className='fi fi-ss-display-code'></i>, qty: 10 },
-  { name: 'Digital Marketing', icon: <i className='fi fi-rs-megaphone'></i>, qty: 10 },
-  { name: 'SEO Optimization', icon: <i className='fi fi-rs-globe'></i>, qty: 15 },
+  { name: 'Web Development', icon: <i className="fi fi-ss-display-code"></i>, qty: 10 },
+  { name: 'Digital Marketing', icon: <i className="fi fi-rs-megaphone"></i>, qty: 10 },
+  { name: 'SEO Optimization', icon: <i className="fi fi-rs-globe"></i>, qty: 15 },
 ]
 
 const WebSection = () => {
@@ -117,19 +119,14 @@ const WebSection = () => {
         <HeadingTitle>SERVICES</HeadingTitle>
         <MainHeader>WHAT I&apos;M GOOD AT</MainHeader>
         <MainContent>
-          As someone with expertise in both Front-end React and SEO optimization, I take great pride
-          in my ability to create stunning, user-friendly web applications that are optimized for
-          search engines. I have always had a passion for web development, and my skills in React
-          allow me to create dynamic and responsive websites that provide an outstanding user
-          experience.
+          As someone with expertise in both Front-end React and SEO optimization, I take great pride in my ability to
+          create stunning, user-friendly web applications that are optimized for search engines. I have always had a
+          passion for web development, and my skills in React allow me to create dynamic and responsive websites that
+          provide an outstanding user experience.
         </MainContent>
         <ServiceContainer>
-          {ServicesData.map((data) => (
-            <ServicesCard
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.5 }}
-              key={data.name}
-            >
+          {ServicesData.map(data => (
+            <ServicesCard whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }} key={data.name}>
               {data.icon}
               <h3>{data.name}</h3>
               <p>{data.qty}+ Projects</p>

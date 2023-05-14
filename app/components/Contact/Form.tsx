@@ -1,8 +1,10 @@
+// Form Component that connects to Form Spark
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useFormspark } from '@formspark/use-formspark'
 
+// CSS + Styled-components
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,6 +57,9 @@ const FormButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `
+type FormItem = {
+  formId: string
+}
 
 const ContactForm = () => {
   const [name, setName] = useState('')
@@ -65,7 +70,7 @@ const ContactForm = () => {
     formId: 'yqLO2wzd',
   })
 
-  const handleSubmit = async (event: { preventDefault: () => void }) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     await submit({ name, email, message })
       .then(() => {
@@ -74,40 +79,36 @@ const ContactForm = () => {
         setEmail('')
         setMessage('')
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err)
       })
   }
 
   return (
     <FormContainer>
-      <FormCard
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-      >
+      <FormCard initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
         <form onSubmit={handleSubmit}>
           <FormLabel>Name</FormLabel>
           <FormInput
-            type='text'
+            type="text"
             value={name}
-            onChange={(event) => setName(event.target.value)}
-            placeholder='Enter your name'
+            onChange={event => setName(event.target.value)}
+            placeholder="Enter your name"
             required
           />
           <FormLabel>Email</FormLabel>
           <FormInput
-            type='email'
+            type="email"
             value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            placeholder='Enter your email address'
+            onChange={event => setEmail(event.target.value)}
+            placeholder="Enter your email address"
             required
           />
           <FormLabel>Message</FormLabel>
           <FormTextarea
             value={message}
-            onChange={(event) => setMessage(event.target.value)}
-            placeholder='Enter your message'
+            onChange={event => setMessage(event.target.value)}
+            placeholder="Enter your message"
             required
           />
           <FormButton disabled={submitting}>Send</FormButton>

@@ -1,3 +1,4 @@
+// Skills Component
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { motion, useAnimation } from 'framer-motion'
@@ -8,6 +9,7 @@ import CMS from '../../assets/software.png'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
 
+// CSS styled-components + framer motion
 const Container = styled(motion.div)`
   padding: 60px 30px;
   @media only screen and (max-width: 1024px) {
@@ -53,13 +55,13 @@ const Card = styled(motion.div)`
   padding: 30px;
 `
 
-const Circle = styled.div<{TextColor : string}>`
+const Circle = styled.div<{ TextColor: string }>`
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.TextColor};
+  background-color: ${props => props.TextColor};
   border-radius: 50%;
   margin: 40px 0;
 `
@@ -69,11 +71,11 @@ const CircleImage = styled(Image)`
   width: 70px;
 `
 
-const Header = styled.h2<{TextColor : string}>`
+const Header = styled.h2<{ TextColor: string }>`
   font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
-  color: ${(props) => props.TextColor};
+  color: ${props => props.TextColor};
 `
 
 const Text = styled.p`
@@ -138,11 +140,11 @@ const Skills = () => {
   }, [animation, inView])
 
   return (
-    <div ref={ref} id='skills'>
+    <div ref={ref} id="skills">
       <Container animate={animation}>
         <MainHeader>Skills</MainHeader>
         <Wrapper>
-          {cardsData.map((data) => (
+          {cardsData.map(data => (
             <Card key={data.id} whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}>
               <Circle TextColor={data.color}>
                 <CircleImage src={data.image} alt={data.header} />
