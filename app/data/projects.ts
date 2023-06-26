@@ -84,7 +84,7 @@ export const ProjectData = [
   {
     id: 8,
     title: 'Frontend Mentor QR Code Component',
-    about: '',
+    about: 'This is a solution to the QR code component challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.',
     tags: ['HTML', 'CSS'],
     github: 'https://github.com/layan2k/qr-code-component-main',
     demo: 'https://qr-code-component-main-blond.vercel.app/',
@@ -102,7 +102,7 @@ export const ProjectData = [
   {
     id: 10,
     title: 'MotivCenter ',
-    about: '',
+    about: 'Motivcenter React Frontend developed for a Team coaching comapany based Mozambique(Showcase Version)',
     tags: ['React', 'Framer-motion', 'Styled-Components', 'Vite'],
     github: 'https://github.com/layan2k/nodeblog',
     demo: 'https://motivcenter.lesliethedev.me/',

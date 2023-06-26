@@ -37,6 +37,7 @@ const LoadinContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #1d1f22;
 `
 
 const Menu = styled.div`
@@ -128,9 +129,8 @@ export default function Home() {
             height="80"
             width="80"
             radius="9"
-            color="#2b2d42"
+            color="royalblue"
             ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
             visible={true}
           />
         </LoadinContainer>
