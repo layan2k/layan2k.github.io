@@ -13,9 +13,10 @@ import Skills from './components/Skill/Skills'
 import Contact from './components/Contact/Contact'
 import BackToTop from './components/common/BackToTop'
 import Footer from './components/Footer/Footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import { ThreeDots } from 'react-loader-spinner'
 
 // CSS Styled Components
 const RootContainer = styled.div`
@@ -29,6 +30,13 @@ const Container = styled.div`
     min-height: 100vh;
     height: auto;
   }
+`
+
+const LoadinContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 `
 
 const Menu = styled.div`
@@ -65,6 +73,10 @@ const MenuIcon = styled(Image)`
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
+  const [isLoaded, setIsLoaded] = useState<boolean>(false)
+  useEffect(() => {
+    setIsLoaded(isLoaded => true)
+  }, [])
   const handleMenuOpen = () => {
     setMenuOpen(true)
   }
@@ -77,38 +89,52 @@ export default function Home() {
       <Head>
         <title>Leslie Shumba</title>
       </Head>
-      <RootContainer>
-        <Container>
-          {/* NavBar */}
-          <Menu>
-            <Navbar />
-          </Menu>
-          <Mobile>
-            <Left>
-              LS<span>.</span>
-            </Left>
-            {/* <button onClick={handleMenuOpen}>ClickMe</button> */}
-            <MenuIcon src={HamMenu} alt="MenuButton" onClick={handleMenuOpen} />
-            <MobileMenu isOpen={menuOpen} onClose={handleMenuClose} />
-          </Mobile>
-          {/* Hero Section */}
-          <Hero />
-        </Container>
-        {/* Services */}
-        <WebSection />
-        {/* Projects */}
-        <Projects />
-        {/* Resume */}
-        <Resume />
-        {/* Skills */}
-        <Skills />
-        {/* Contact */}
-        <Contact />
-        {/* Back To Top Button */}
-        <BackToTop />
-        {/* Footer */}
-        <Footer />
-      </RootContainer>
+      {isLoaded ? (
+        <RootContainer>
+          <Container>
+            {/* NavBar */}
+            <Menu>
+              <Navbar />
+            </Menu>
+            <Mobile>
+              <Left>
+                LS<span>.</span>
+              </Left>
+              {/* <button onClick={handleMenuOpen}>ClickMe</button> */}
+              <MenuIcon src={HamMenu} alt="MenuButton" onClick={handleMenuOpen} />
+              <MobileMenu isOpen={menuOpen} onClose={handleMenuClose} />
+            </Mobile>
+            {/* Hero Section */}
+            <Hero />
+          </Container>
+          {/* Services */}
+          <WebSection />
+          {/* Projects */}
+          <Projects />
+          {/* Resume */}
+          <Resume />
+          {/* Skills */}
+          <Skills />
+          {/* Contact */}
+          <Contact />
+          {/* Back To Top Button */}
+          <BackToTop />
+          {/* Footer */}
+          <Footer />
+        </RootContainer>
+      ) : (
+        <LoadinContainer>
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color="#2b2d42"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            visible={true}
+          />
+        </LoadinContainer>
+      )}
     </>
   )
 }

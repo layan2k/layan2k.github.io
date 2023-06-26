@@ -10,6 +10,7 @@ const Container = styled(motion.div)`
   background-color: #1d1f22;
   padding: 60px 30px;
   position: relative;
+  height: 100%;
   h1 {
     color: #1f51ff;
     font-size: 30px;
@@ -39,6 +40,7 @@ const ProjectsContainer = styled.div`
 
 const ProjectCard = styled.div`
   width: 30%;
+  height: 100%;
   margin-bottom: 20px;
   padding: 20px;
   background-color: #464646;
@@ -123,7 +125,7 @@ const ProjectTags = styled.div`
 
 const Projects = () => {
   const projects = ProjectData
-  const [displayCount, setDisplayCount] = useState(3)
+  const [displayCount, setDisplayCount] = useState<number>(3)
   const smallScreen = typeof window !== 'undefined' && window.screen.width <= 780 ? true : false
 
   const handleLoadMore = () => {
@@ -132,7 +134,7 @@ const Projects = () => {
   }
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0,
   })
   const animation = useAnimation()
 
@@ -156,6 +158,7 @@ const Projects = () => {
           stiffness: 100,
         },
       })
+      setDisplayCount(3)
     }
   }, [animation, inView, smallScreen])
 

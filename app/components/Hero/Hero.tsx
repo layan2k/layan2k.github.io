@@ -212,7 +212,7 @@ const Hero = () => {
             LinkedIn
           </SocailLinks>
         </SocialLinksContainer>
-        <Button download href="https://firesidebackapp.s3.amazonaws.com/mypics/Leslie+Shumba+Resume.pdf">
+        <Button download href="https://firesidebackapp.s3.amazonaws.com/mypics/Leslie+Shumba+Resume+.pdf">
           Download Resume
         </Button>
       </NameContainer>
@@ -224,10 +224,7 @@ const Hero = () => {
         <IntroContainer>
           <Intro>INTRODUCTION</Intro>
         </IntroContainer>
-        <TitleJob>
-          Freelance SEO Specialist,
-          <br /> Full-Stack Web Developer
-        </TitleJob>
+        <TitleJob>React Developer Developer</TitleJob>
         <OtherText>
           Crafting exceptional websites and driving traffic through SEO expertise - I am a full-stack developer and SEO
           specialist dedicated to achieving your digital goals.

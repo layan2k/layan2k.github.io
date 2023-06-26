@@ -24,7 +24,7 @@ export const ProjectData = [
     title: 'Elevate',
     about: ' A Multivendor Developed Using WordPress, Dokan and Elementor.',
     tags: ['WordPress', 'Elementor', 'Dokan'],
-    demo: 'https://elevateproto.co/',
+    demo: 'https://creativeyadleydemo.com/codetestzim/',
     image: 'https://firesidebackapp.s3.amazonaws.com/mypics/Screenshot+2021-09-21+093209.png',
   },
   // {
@@ -62,5 +62,50 @@ export const ProjectData = [
     github: 'https://github.com/layan2k/agency-site',
     demo: 'https://agenctdemolds.netlify.app/',
     image: 'https://firesidebackapp.s3.amazonaws.com/mypics/AgencySite.png',
+  },
+  {
+    id: 6,
+    title: 'Pizza UI',
+    about: 'Basic React Pizza UI',
+    tags: ['React', 'JavaScript'],
+    github: '',
+    demo: 'https://foodui.lesliethedev.me/',
+    image: 'https://firesidebackapp.s3.amazonaws.com/mypics/mobile+(6).png'
+  },
+  {
+    id: 7,
+    title: 'IntraSpark',
+    about: 'React Three Project , exploring 3D development with React',
+    tags: ['React', 'Three', 'React Three', 'Vite'],
+    github: 'https://github.com/layan2k/react_three_intraSpark',
+    demo: 'https://intraspark.lesliethedev.me/',
+    image: 'https://firesidebackapp.s3.amazonaws.com/mypics/mobile+(8).png'
+  },
+  {
+    id: 8,
+    title: 'Frontend Mentor QR Code Component',
+    about: '',
+    tags: ['HTML', 'CSS'],
+    github: 'https://github.com/layan2k/qr-code-component-main',
+    demo: 'https://qr-code-component-main-blond.vercel.app/',
+    image: 'https://firesidebackapp.s3.amazonaws.com/mypics/mobile+(9).png'
+  },
+  {
+    id: 9,
+    title: 'Node Blog ',
+    about: 'Serverside rendered simple blog developed using ExpressJS',
+    tags: ['Node', 'Express', 'MongoDB', 'EJS'],
+    github: 'https://github.com/layan2k/nodeblog',
+    demo: 'https://nodeblog-z0dz.onrender.com/',
+    image: 'https://firesidebackapp.s3.amazonaws.com/mypics/mobile+(5).png'
+  },
+  {
+    id: 10,
+    title: 'MotivCenter ',
+    about: '',
+    tags: ['React', 'Framer-motion', 'Styled-Components', 'Vite'],
+    github: 'https://github.com/layan2k/nodeblog',
+    demo: 'https://motivcenter.lesliethedev.me/',
+    image: 'https://firesidebackapp.s3.amazonaws.com/mypics/mobile+(7).png'
   },
 ]
