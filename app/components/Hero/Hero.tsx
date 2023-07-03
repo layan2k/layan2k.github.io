@@ -224,7 +224,7 @@ const Hero = () => {
         <IntroContainer>
           <Intro>INTRODUCTION</Intro>
         </IntroContainer>
-        <TitleJob>React Developer Developer</TitleJob>
+        <TitleJob>React Developer</TitleJob>
         <OtherText>
           Crafting exceptional websites and driving traffic through SEO expertise - I am a full-stack developer and SEO
           specialist dedicated to achieving your digital goals.
