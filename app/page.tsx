@@ -33,10 +33,10 @@ const Container = styled.div`
 `
 
 const LoadinContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #1d1f22;
 `
 
