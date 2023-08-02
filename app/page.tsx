@@ -16,7 +16,7 @@ import Footer from './components/Footer/Footer'
 import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { ThreeDots } from 'react-loader-spinner'
+import PacmanLoader from 'react-spinners/PacmanLoader'
 
 // CSS Styled Components
 const RootContainer = styled.div`
@@ -33,10 +33,11 @@ const Container = styled.div`
 `
 
 const LoadinContainer = styled.div`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
   background-color: #1d1f22;
 `
 
@@ -125,14 +126,7 @@ export default function Home() {
         </RootContainer>
       ) : (
         <LoadinContainer>
-          <ThreeDots
-            height="80"
-            width="80"
-            radius="9"
-            color="royalblue"
-            ariaLabel="three-dots-loading"
-            visible={true}
-          />
+          <PacmanLoader color="royalblue" size={40} />
         </LoadinContainer>
       )}
     </>
