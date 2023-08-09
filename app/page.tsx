@@ -125,7 +125,7 @@ export default function Home() {
           <Footer />
         </RootContainer>
       ) : (
-        <LoadinContainer>
+        <LoadinContainer className="loadingPage">
           <PacmanLoader color="royalblue" size={40} />
         </LoadinContainer>
       )}
