@@ -75,6 +75,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css" />
       </head>
       <body className={DM.className}>{children}</body>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3814947401070530"
+        crossOrigin="anonymous"></script>
     </html>
   )
 }
